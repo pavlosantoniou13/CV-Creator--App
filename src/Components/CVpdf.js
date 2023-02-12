@@ -34,7 +34,7 @@ export default function CVpdf(props) {
           </div>
 
           <div className="contactInfo education">
-            <h3 className="title">Contact Info</h3>
+            <h3 className="title">Education</h3>
             <ul>
               <li className='icon'>
                 <span className="text">{props.school}</span>
