@@ -117,6 +117,7 @@ input {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin-top: 20px;
 }
 
@@ -314,4 +315,31 @@ li {
 
 .right_side p {
   color: #333
+}
+
+.add-experience {
+  --background:#f1356d;
+  --text: #black;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  border-radius: 11px;
+  line-height: 16px;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 14px;
+  overflow: hidden;
+  color: var(--text);
+  background: var(--b, var(--background));
+  transition: transform 0.15s ease-in-out 0s;
+  transform: scale(var(--scale, 1)) translateZ(0);
+  width: 4rem;
+  margin-top: 3%;
+}
+
+.add-experience:hover {
+  transform: scale(1.1);
 }

@@ -66,6 +66,16 @@ export default function CVpdf(props) {
                 <p> {props.tasks} </p>
               </div>
             </div>
+            <div className="box">
+              <div className="year_company">
+              <h4> {props.fromJobDate1} - {props.toJobDate1} </h4>
+                <h4> {props.company1} </h4>
+                <h4> {props.position1} </h4>
+              </div>
+              <div className="text">
+                <p> {props.tasks1} </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

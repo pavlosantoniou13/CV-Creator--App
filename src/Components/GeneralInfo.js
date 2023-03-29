@@ -39,12 +39,14 @@ export default function GeneralInfo(props) {
                             onChange={props.handleChange} id="phone" value={props.phone} />
                         </div>
                     </div>  
+                    
                     <div className="tasksContainer">
                         <div className="about">
                             <textarea type="text" placeholder='Write something about yourself...' 
                             onChange={props.handleChange} id="about" value={props.about} />
                         </div>
                     </div>  
+                    
                 </form>
             </div>
       
