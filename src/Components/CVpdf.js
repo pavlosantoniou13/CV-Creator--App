@@ -1,6 +1,8 @@
 import phoneimg from './call.svg'
 import mailimg from './mail.svg'
 import img1 from './img1.jpg'
+import { useReactToPrint } from 'react-to-print'
+import { useRef } from 'react'
 
 
 export default function CVpdf(props) {
@@ -23,10 +25,10 @@ export default function CVpdf(props) {
  
 
   const showDate = (fromDate, toDate) => {
-    const date = require('dayjs')
-    const currentDate =  date(toDate).format('20YY-MM-DD')
    
-    console.log(props.toJobDate)
+    const currentDate =  new Date().toLocaleDateString('en-CA')
+   
+    
 
     if(toDate === currentDate) {
       return (
@@ -38,11 +40,14 @@ export default function CVpdf(props) {
       )
     }
   }
+
   
+
+
 
   return (
     <div className="CV">
-      <div className="container">
+      <div ref={props.componentRef} className="container">
         <div className="left_side">
           <div className="profileText">
             <div className="imgBx">{uploadImage()}</div>

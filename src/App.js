@@ -3,8 +3,9 @@ import HomePage from './HomePage'
 import './styles.css'
 import CVpdf from './Components/CVpdf'
 import {  Routes, Route } from "react-router-dom";
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import Axios from 'axios';
+import { useReactToPrint } from 'react-to-print';
 
 function App() {
   const [name, setName] = useState('');
@@ -129,11 +130,17 @@ function App() {
     
   }
 
+  const componentRef = useRef()
+
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+    documentTitle: 'Resume'
+  })
 
   return (
     
   <div>
-    <Navbar />
+    <Navbar handlePrint={handlePrint} />
     <Routes>
       <Route path='/' element={<HomePage  handleChange={handleChange} name={name} lastName={lastName} email={email}phone={phone} about={about} profession={profession} location={location} hobbies={hobbies} 
        school={school} titleOfStudy={titleOfStudy} fromDate={fromDate} toDate={toDate} 
@@ -145,7 +152,7 @@ function App() {
        school={school} titleOfStudy={titleOfStudy} fromDate={fromDate} toDate={toDate} 
         company={company} position={position} fromJobDate={fromJobDate} toJobDate={toJobDate} tasks={tasks}
         company1={company1} position1={position1} fromJobDate1={fromJobDate1} toJobDate1={toJobDate1} tasks1={tasks1}
-        userImage={userImage}  />} /> 
+        userImage={userImage} componentRef={componentRef}  />} /> 
 
     </Routes>
    

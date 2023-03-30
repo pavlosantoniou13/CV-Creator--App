@@ -200,7 +200,7 @@ textarea {
 
 .container .left_side{
   position: relative;
-  background-color: #003147;
+  background-color: #00645F;
   padding: 40px;
   
 }
@@ -368,5 +368,30 @@ input[type=file]::file-selector-button:hover {
 .imageContainer {
   align-items: center;
   margin-top: 1rem;
+}
+
+.pdfButton {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-self: baseline;
+  margin-top: 1rem;
+}
+
+.svg {
+  height: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.15s ease-in-out 0s;
+  transform: scale(var(--scale, 1)) translateZ(0);
+  margin-left: 1rem;
+}
+
+.svg:hover {
+  transform: scale(1.1);
+}
+
+.text > h4 {
+  color: white;
+  font-weight: normal;
 }
 
