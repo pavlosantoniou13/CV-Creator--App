@@ -15,7 +15,7 @@ export default function CVpdf(props) {
             <div className="imgBx">
               <img src={img1} alt="lala" />
             </div>
-            <h2>{props.name} {props.lastName} <br></br> <span>Web Developer</span></h2>
+            <h2>{props.name} {props.lastName} <br></br> <span>{props.profession}</span></h2>
           </div>
           <div className="contactInfo">
             <h3 className="title">Contact Info</h3>

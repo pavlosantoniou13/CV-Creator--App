@@ -10,7 +10,11 @@ function App() {
   const [lastName, setLastName] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
+  const [location, setLocation] = useState("")
+  const [profession, setProfession] = useState("")
   const [about, setAbout] = useState("")
+  const [hobbies, setHobbies] = useState("")
+  const [userImage, setUserImage] = useState()
 
   const [school, setSchool] = useState('');
   const [titleOfStudy, settitleOfStudy] = useState("")
@@ -29,6 +33,10 @@ function App() {
   const [toJobDate1, settoJobDate1] = useState("")
   const [tasks1, setTasks1] = useState("")
 
+  const handleUpload = (e) => {
+    setUserImage(e.target.files[0])
+  }
+
   const handleChange = (e) => {
     
     if(e.target.id === "name") {
@@ -45,7 +53,17 @@ function App() {
 
     } else if(e.target.id === "about") {
       setAbout(e.target.value)
-    }
+
+    }  else if(e.target.id === "location") {
+      setLocation(e.target.value)
+
+    } else if(e.target.id === "profession") {
+      setProfession(e.target.value)
+
+    } else if(e.target.id === "hobbies") {
+      setHobbies(e.target.value)
+
+    }  
     
   
 
@@ -98,11 +116,11 @@ function App() {
 
     }  
     
-    console.log(toJobDate1)
+    
 
-    const person = { name, lastName, email, phone, school, titleOfStudy, fromDate, toDate
-    , company, position, toJobDate, fromJobDate, tasks, about,
-     company1, position1, toJobDate1, fromJobDate1, tasks1, }
+    const person = { name, lastName, email, phone, school, titleOfStudy, fromDate, toDate, profession, location, hobbies
+    , company, position, toJobDate, fromJobDate, tasks, about, profession, location,
+     company1, position1, toJobDate1, fromJobDate1, tasks1, userImage }
     console.log(person)
   };
 
@@ -111,14 +129,17 @@ function App() {
   <div>
     <Navbar />
     <Routes>
-      <Route path='/' element={<HomePage  handleChange={handleChange} name={name} lastName={lastName} email={email}phone={phone} about={about} 
-       school={school} titleOfStudy={titleOfStudy} fromDate={fromDate} toDate={toDate} 
-        company={company} position={position} fromJobDate={fromJobDate} toJobDate={toJobDate} tasks={tasks} />}/>
-        
-      <Route path='/CVpdf' element={<CVpdf name={name} lastName={lastName} email={email}phone={phone} about={about} 
+      <Route path='/' element={<HomePage  handleChange={handleChange} name={name} lastName={lastName} email={email}phone={phone} about={about} profession={profession} location={location} hobbies={hobbies} 
        school={school} titleOfStudy={titleOfStudy} fromDate={fromDate} toDate={toDate} 
         company={company} position={position} fromJobDate={fromJobDate} toJobDate={toJobDate} tasks={tasks}
-        company1={company1} position1={position1} fromJobDate1={fromJobDate1} toJobDate1={toJobDate1} tasks1={tasks1}  />} /> 
+        company1={company1} position1={position1} fromJobDate1={fromJobDate1} toJobDate1={toJobDate1} tasks1={tasks1}
+        handleUpload={handleUpload} />}/>
+        
+      <Route path='/CVpdf' element={<CVpdf name={name} lastName={lastName} email={email}phone={phone} about={about} profession={profession} location={location} 
+       school={school} titleOfStudy={titleOfStudy} fromDate={fromDate} toDate={toDate} 
+        company={company} position={position} fromJobDate={fromJobDate} toJobDate={toJobDate} tasks={tasks}
+        company1={company1} position1={position1} fromJobDate1={fromJobDate1} toJobDate1={toJobDate1} tasks1={tasks1}
+        userImage={userImage}  />} /> 
 
     </Routes>
    
