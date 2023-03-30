@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/CV-Creator--App/static/css/main.0b603e97.css",
-    "main.js": "/CV-Creator--App/static/js/main.adfa7e82.js",
+    "main.css": "/CV-Creator--App/static/css/main.4c6f98d4.css",
+    "main.js": "/CV-Creator--App/static/js/main.0adba77d.js",
     "static/media/img1.jpg": "/CV-Creator--App/static/media/img1.237b1a1a53b968ba7094.jpg",
     "index.html": "/CV-Creator--App/index.html",
     "static/media/call.svg": "/CV-Creator--App/static/media/call.02af061e66783ca2006ed508969a4506.svg",
     "static/media/mail.svg": "/CV-Creator--App/static/media/mail.5a387e74dbef285fe81a3cd40ea170b5.svg",
-    "main.0b603e97.css.map": "/CV-Creator--App/static/css/main.0b603e97.css.map",
-    "main.adfa7e82.js.map": "/CV-Creator--App/static/js/main.adfa7e82.js.map"
+    "main.4c6f98d4.css.map": "/CV-Creator--App/static/css/main.4c6f98d4.css.map",
+    "main.0adba77d.js.map": "/CV-Creator--App/static/js/main.0adba77d.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b603e97.css",
-    "static/js/main.adfa7e82.js"
+    "static/css/main.4c6f98d4.css",
+    "static/js/main.0adba77d.js"
   ]
 }
