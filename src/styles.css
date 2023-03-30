@@ -90,7 +90,8 @@ body {
 .profession,
 .about,
 .hobbies,
-.imageContainer {
+.imageContainer,
+.experience {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -368,3 +369,4 @@ input[type=file]::file-selector-button:hover {
   align-items: center;
   margin-top: 1rem;
 }
+

@@ -4,6 +4,7 @@ import './styles.css'
 import CVpdf from './Components/CVpdf'
 import {  Routes, Route } from "react-router-dom";
 import { useState } from 'react'
+import Axios from 'axios';
 
 function App() {
   const [name, setName] = useState('');
@@ -33,9 +34,7 @@ function App() {
   const [toJobDate1, settoJobDate1] = useState("")
   const [tasks1, setTasks1] = useState("")
 
-  const handleUpload = (e) => {
-    setUserImage(e.target.files[0])
-  }
+  
 
   const handleChange = (e) => {
     
@@ -124,6 +123,13 @@ function App() {
     console.log(person)
   };
 
+
+  const handleUpload = (e) => {
+    setUserImage(e.target.files[0])
+    
+  }
+
+
   return (
     
   <div>
@@ -135,7 +141,7 @@ function App() {
         company1={company1} position1={position1} fromJobDate1={fromJobDate1} toJobDate1={toJobDate1} tasks1={tasks1}
         handleUpload={handleUpload} />}/>
         
-      <Route path='/CVpdf' element={<CVpdf name={name} lastName={lastName} email={email}phone={phone} about={about} profession={profession} location={location} 
+      <Route path='/CVpdf' element={<CVpdf name={name} lastName={lastName} email={email}phone={phone} about={about} profession={profession} location={location} hobbies={hobbies}
        school={school} titleOfStudy={titleOfStudy} fromDate={fromDate} toDate={toDate} 
         company={company} position={position} fromJobDate={fromJobDate} toJobDate={toJobDate} tasks={tasks}
         company1={company1} position1={position1} fromJobDate1={fromJobDate1} toJobDate1={toJobDate1} tasks1={tasks1}
