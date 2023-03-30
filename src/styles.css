@@ -85,7 +85,13 @@ body {
 .from,
 .to,
 .company,
-.position {
+.position,
+.location,
+.profession,
+.about,
+.hobbies,
+.imageContainer,
+.experience {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -98,7 +104,7 @@ body {
     margin-top: 20px;
 }
 
-input {
+.input {
     
   background: #ecf0f3;
   padding: 5px;
@@ -117,6 +123,7 @@ input {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin-top: 20px;
 }
 
@@ -193,7 +200,7 @@ textarea {
 
 .container .left_side{
   position: relative;
-  background-color: #003147;
+  background-color: #00645F;
   padding: 40px;
   
 }
@@ -315,3 +322,76 @@ li {
 .right_side p {
   color: #333
 }
+
+.add-experience {
+  --background:#084cdf;
+  --text: white;
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  border-radius: 11px;
+  line-height: 16px;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 14px;
+  overflow: hidden;
+  color: var(--text);
+  background: var(--b, var(--background));
+  transition: transform 0.15s ease-in-out 0s;
+  transform: scale(var(--scale, 1)) translateZ(0);
+  width: 4rem;
+  margin-top: 3%;
+}
+
+.add-experience:hover {
+  background: #0d45a5;
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition:  .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+}
+
+.imageContainer {
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.pdfButton {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-self: baseline;
+  margin-top: 1rem;
+}
+
+.svg {
+  height: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.15s ease-in-out 0s;
+  transform: scale(var(--scale, 1)) translateZ(0);
+  margin-left: 1rem;
+}
+
+.svg:hover {
+  transform: scale(1.1);
+}
+
+.text > h4 {
+  color: white;
+  font-weight: normal;
+}
+

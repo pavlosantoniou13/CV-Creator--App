@@ -20,24 +20,24 @@ export default function Education(props) {
                     <div className="upper">
                         <div className="schoolName">
                             <label htmlFor="schoolName">School Name</label>
-                            <input type="text" placeholder='School Name...' required
+                            <input className='input' type="text" placeholder='School Name...' required
                             onChange={props.handleChange} id='school' value={props.school} />   
                         </div>
                         <div className="titleOfStudy">
                             <label htmlFor="titleOfStudy">Title of study</label>
-                            <input type="text" placeholder='Title of study...' required
+                            <input className='input' type="text" placeholder='Title of study...' required
                             onChange={props.handleChange} id='studyTitle' value={props.titleOfStudy}  />
                         </div>
                     </div> 
                     <div className="lower">  
                         <div className="from">
                             <label htmlFor="from">From</label>
-                            <input type="date"  required  
+                            <input className='input' type="date"  required  
                             onChange={props.handleChange} id='fromDate' value={props.fromDate}  />
                         </div>
                         <div className="to">
                             <label htmlFor="to">To</label>
-                            <input className='date' type="date"  required  
+                            <input className='input' type="date"  required  
                             onChange={props.handleChange} id='toDate' value={props.toDate} />
                         </div>
                     </div>  
