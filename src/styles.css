@@ -432,3 +432,16 @@ p {
   }
 }
 
+@media (max-width: 390px){
+  .card-box {
+    margin-left: 4.2rem;
+  }
+}
+
+@media (max-width: 375px){
+  .card-box {
+    margin-left: 4rem;
+  }
+}
+
+
