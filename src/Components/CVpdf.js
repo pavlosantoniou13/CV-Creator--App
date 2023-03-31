@@ -1,8 +1,6 @@
-import phoneimg from './call.svg'
-import mailimg from './mail.svg'
 import img1 from './img1.jpg'
-import { useReactToPrint } from 'react-to-print'
-import { useRef } from 'react'
+import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaGithub, FaLocationArrow } from 'react-icons/fa';
+import dateFormat  from "dateformat";
 
 
 export default function CVpdf(props) {
@@ -25,20 +23,29 @@ export default function CVpdf(props) {
  
 
   const showDate = (fromDate, toDate) => {
-   
-    const currentDate =  new Date().toLocaleDateString('en-CA')
-   
-    
 
+    const currentDate =  new Date().toLocaleDateString('en-CA')
+    
     if(toDate === currentDate) {
       return (
-        <h4> {fromDate + " " + "-"}  Till Date </h4>
+        <h5> {fromDate + " " + "-"}  Till Date </h5>
       )
     } else  {
       return (
-        <h4> {fromDate  + " " + "-"}  {toDate} </h4>
+        <h5> {fromDate  + " " + "-"}  {toDate} </h5>
       )
     }
+  }
+
+  const showDateYear = (fromDate, toDate) => {
+
+   const from =  dateFormat(fromDate, "yyyy")
+   const to =  dateFormat(toDate, "yyyy")
+
+    return (
+      <h5> {from  + " " + "-"}  {to} </h5>
+    )
+
   }
 
   
@@ -61,15 +68,33 @@ export default function CVpdf(props) {
             <ul>
               <li className="icon">
                 <span className="icon">
-                  <img src={phoneimg} alt="" />
+                  <FaPhoneAlt className='icon' />
                 </span>
                 <span className="text">{props.phone}</span>
               </li>
               <li className="icon">
                 <span className="icon">
-                  <img src={mailimg} alt="" />
+                  <FaEnvelope className='icon'/>
                 </span>
                 <span className="text">{props.email}</span>
+              </li>
+              <li className="icon">
+                <span className="icon">
+                  <FaLocationArrow className='icon'/>
+                </span>
+                <span className="text">{props.location}</span>
+              </li>
+              <li className="icon">
+                <span className="icon">
+                  <FaLinkedin className='icon'/>
+                </span>
+                <span className="text">{props.linkedin}</span>
+              </li>
+              <li className="icon">
+                <span className="icon">
+                  <FaGithub className='icon'/>
+                </span>
+                <span className="text">{props.github}</span>
               </li>
             </ul>
           </div>
@@ -78,15 +103,22 @@ export default function CVpdf(props) {
             <h3 className="title">Education</h3>
             <ul>
               <li className="icon">
-                <span className="text">{props.school}</span>
+                <li className="text">{showDateYear(props.fromDate, props.toDate)}</li>
               </li>
               <li className="icon">
                 <span className="text">{props.titleOfStudy}</span>
               </li>
-              <li className="text">{showDate(props.fromDate, props.toDate)}</li>
+              <li className="text"><span className="text">{props.school}</span></li>
             </ul>
           </div>
+
+          <div className="contactInfo education">
+            <h3 className="title">Languages</h3>
+            <h4>{props.languages}</h4>
+          </div>
+
         </div>
+        
         <div className="right_side">
           <div className="about">
             <h2 className="title2">About me</h2>
@@ -97,10 +129,10 @@ export default function CVpdf(props) {
             <div className="box">
               <div className="year_company">
                 {showDate(props.fromJobDate, props.toJobDate)}
-                <h4> {props.company} </h4>
-                <h4> {props.position} </h4>
+                <h4>{props.company}</h4>
               </div>
               <div className="text">
+                <h4> {props.position} </h4>
                 <p> {props.tasks} </p>
               </div>
             </div>

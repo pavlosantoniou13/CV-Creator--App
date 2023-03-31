@@ -51,6 +51,27 @@ export default function GeneralInfo(props) {
                             onChange={props.handleChange} id="profession" value={props.profession} />
                         </div>
                     </div>  
+                    <div className="lower">  
+                        <div className="location">
+                            <label htmlFor="location">Linkedin</label>
+                            <input className='input' type="url" placeholder='Linkedin...' required 
+                        onChange={props.handleChange} id="linkedin" value={props.linkedin} />
+                        </div>
+                        <div className="profession">
+                            <label htmlFor="profession">GitHub</label>
+                            <input className='input' type="url" placeholder='GitHub...' required
+                            onChange={props.handleChange} id="github" value={props.github} />
+                        </div>
+                    </div>  
+
+                    <div className="tasksContainer">
+                        <div className="about">
+                            <div>Languages</div>
+                            <div><textarea type="text" placeholder='Enlgish/fluent...' 
+                            onChange={props.handleChange} id="languages" value={props.languages} /></div>
+                        </div>
+                    </div>  
+                    
                     
                     <div className="tasksContainer">
                         <div className="about">
@@ -68,7 +89,7 @@ export default function GeneralInfo(props) {
                         </div>
                     </div>  
                     <div className="imageContainer">
-                        Upload a profile
+                        Upload a profile image
                         <input onChange={props.handleUpload}  type="file" accept="image/*"/>
                         
                     </div>  

@@ -31,7 +31,7 @@ body {
 }
 
 .navbar h1 {
-  color: #f1356d;
+  color: black;
 }
 .navbar .links {
   margin-left: auto;
@@ -42,7 +42,7 @@ body {
   padding: 6px;
 }
 .navbar a:hover {
-  color: #f1356d;
+  color: #00645F;
 }
 
 .card {
@@ -173,10 +173,6 @@ textarea {
    border-style: none;
 }
 
-
-
-
-
 .CV {
   background-color: lightblue;
   display: flex;
@@ -255,7 +251,7 @@ textarea {
   
 }  
 
-.icon img {
+.icon  {
   height: 25px;
   margin-right: 10px;
 }
@@ -324,7 +320,7 @@ li {
 }
 
 .add-experience {
-  --background:#084cdf;
+  --background:black;
   --text: white;
   outline: none;
   cursor: pointer;
@@ -340,7 +336,7 @@ li {
   overflow: hidden;
   color: var(--text);
   background: var(--b, var(--background));
-  transition: transform 0.15s ease-in-out 0s;
+  transition:  .2s ease-in-out;
   transform: scale(var(--scale, 1)) translateZ(0);
   width: 4rem;
   margin-top: 3%;
@@ -353,7 +349,7 @@ li {
 input[type=file]::file-selector-button {
   margin-right: 20px;
   border: none;
-  background: #084cdf;
+  background: black;
   padding: 10px 20px;
   border-radius: 10px;
   color: #fff;
@@ -370,6 +366,11 @@ input[type=file]::file-selector-button:hover {
   margin-top: 1rem;
 }
 
+.education h4 {
+  color: white;
+  font-weight: normal;
+}
+
 .pdfButton {
   height: 100%;
   display: flex;
@@ -378,7 +379,7 @@ input[type=file]::file-selector-button:hover {
   margin-top: 1rem;
 }
 
-svg {
+.navbar  svg {
   height: 1.5rem;
   cursor: pointer;
   transition: transform 0.15s ease-in-out 0s;
@@ -387,12 +388,33 @@ svg {
 }
 
 
-svg:hover {
+.navbar  svg:hover {
   transform: scale(1.1);
 }
 
-.text > h4 {
+.text > h5 {
   color: white;
   font-weight: normal;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.year_company h5 {
+  font-size: 1rem;
+}
+
+@media (max-width: 1000px)
+{
+  .container {
+    margin: 10px;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  ul {
+    grid-template-columns: repeat(2,1fr);
+  }
+  
 }
 

@@ -14,6 +14,10 @@ function App() {
   const [phone, setPhone] = useState("")
   const [location, setLocation] = useState("")
   const [profession, setProfession] = useState("")
+  const [linkedin, setLinkedin] = useState("")
+  const [github, setGithub] = useState("")
+  const [languages, setLanguages] = useState("")
+
   const [about, setAbout] = useState("")
   const [hobbies, setHobbies] = useState("")
   const [userImage, setUserImage] = useState()
@@ -62,6 +66,15 @@ function App() {
 
     } else if(e.target.id === "hobbies") {
       setHobbies(e.target.value)
+
+    }  else if(e.target.id === "linkedin") {
+      setLinkedin(e.target.value)
+
+    }  else if(e.target.id === "github") {
+      setGithub(e.target.value)
+
+    }  else if(e.target.id === "languages") {
+      setLanguages(e.target.value)
 
     }  
     
@@ -120,7 +133,7 @@ function App() {
 
     const person = { name, lastName, email, phone, school, titleOfStudy, fromDate, toDate, profession, location, hobbies
     , company, position, toJobDate, fromJobDate, tasks, about, profession, location,
-     company1, position1, toJobDate1, fromJobDate1, tasks1, userImage }
+     company1, position1, toJobDate1, fromJobDate1, tasks1, userImage, linkedin, github, languages }
     console.log(person)
   };
 
@@ -145,14 +158,14 @@ function App() {
       <Route path='/' element={<HomePage  handleChange={handleChange} name={name} lastName={lastName} email={email}phone={phone} about={about} profession={profession} location={location} hobbies={hobbies} 
        school={school} titleOfStudy={titleOfStudy} fromDate={fromDate} toDate={toDate} 
         company={company} position={position} fromJobDate={fromJobDate} toJobDate={toJobDate} tasks={tasks}
-        company1={company1} position1={position1} fromJobDate1={fromJobDate1} toJobDate1={toJobDate1} tasks1={tasks1}
-        handleUpload={handleUpload} />}/>
+        company1={company1} position1={position1} fromJobDate1={fromJobDate1} toJobDate1={toJobDate1} tasks1={tasks1} linkedin={linkedin} github={github}
+        handleUpload={handleUpload} languages={languages} />}/>
         
       <Route path='/CVpdf' element={<CVpdf name={name} lastName={lastName} email={email}phone={phone} about={about} profession={profession} location={location} hobbies={hobbies}
        school={school} titleOfStudy={titleOfStudy} fromDate={fromDate} toDate={toDate} 
         company={company} position={position} fromJobDate={fromJobDate} toJobDate={toJobDate} tasks={tasks}
         company1={company1} position1={position1} fromJobDate1={fromJobDate1} toJobDate1={toJobDate1} tasks1={tasks1}
-        userImage={userImage} componentRef={componentRef}  />} /> 
+        userImage={userImage} componentRef={componentRef} linkedin={linkedin} github={github} languages={languages}  />} /> 
 
     </Routes>
    
