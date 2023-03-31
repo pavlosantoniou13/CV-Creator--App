@@ -35,6 +35,7 @@ body {
 }
 .navbar .links {
   margin-left: auto;
+ 
 }
 .navbar a {
   margin-left: 16px;
@@ -416,5 +417,31 @@ p {
     grid-template-columns: repeat(2,1fr);
   }
   
+  .navbar .links {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  
 }
+
+@media (max-width: 400px){
+  .card-box {
+    margin-left: 5rem;
+  }
+}
+
+@media (max-width: 390px){
+  .card-box {
+    margin-left: 4.2rem;
+  }
+}
+
+@media (max-width: 375px){
+  .card-box {
+    margin-left: 4rem;
+  }
+}
+
 
