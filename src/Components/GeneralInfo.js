@@ -63,6 +63,14 @@ export default function GeneralInfo(props) {
                             onChange={props.handleChange} id="github" value={props.github} />
                         </div>
                     </div>  
+
+                    <div className="tasksContainer">
+                        <div className="about">
+                            <div>Languages</div>
+                            <div><textarea type="text" placeholder='Enlgish/fluent...' 
+                            onChange={props.handleChange} id="languages" value={props.languages} /></div>
+                        </div>
+                    </div>  
                     
                     
                     <div className="tasksContainer">

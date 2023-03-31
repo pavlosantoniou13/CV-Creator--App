@@ -366,6 +366,11 @@ input[type=file]::file-selector-button:hover {
   margin-top: 1rem;
 }
 
+.education h4 {
+  color: white;
+  font-weight: normal;
+}
+
 .pdfButton {
   height: 100%;
   display: flex;
@@ -396,10 +401,20 @@ p {
   font-size: 1.2rem;
 }
 
-.title {
-  
-}
-
 .year_company h5 {
   font-size: 1rem;
 }
+
+@media (max-width: 1000px)
+{
+  .container {
+    margin: 10px;
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  ul {
+    grid-template-columns: repeat(2,1fr);
+  }
+  
+}
+

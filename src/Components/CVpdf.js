@@ -111,6 +111,12 @@ export default function CVpdf(props) {
               <li className="text"><span className="text">{props.school}</span></li>
             </ul>
           </div>
+
+          <div className="contactInfo education">
+            <h3 className="title">Languages</h3>
+            <h4>{props.languages}</h4>
+          </div>
+
         </div>
         
         <div className="right_side">
