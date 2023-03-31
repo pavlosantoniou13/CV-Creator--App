@@ -1,8 +1,6 @@
-import phoneimg from './call.svg'
-import mailimg from './mail.svg'
 import img1 from './img1.jpg'
-import { useReactToPrint } from 'react-to-print'
-import { useRef } from 'react'
+import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaGithub, FaLocationArrow } from 'react-icons/fa';
+
 
 
 export default function CVpdf(props) {
@@ -61,15 +59,33 @@ export default function CVpdf(props) {
             <ul>
               <li className="icon">
                 <span className="icon">
-                  <img src={phoneimg} alt="" />
+                  <FaPhoneAlt className='icon' />
                 </span>
                 <span className="text">{props.phone}</span>
               </li>
               <li className="icon">
                 <span className="icon">
-                  <img src={mailimg} alt="" />
+                  <FaEnvelope className='icon'/>
                 </span>
                 <span className="text">{props.email}</span>
+              </li>
+              <li className="icon">
+                <span className="icon">
+                  <FaLocationArrow className='icon'/>
+                </span>
+                <span className="text">{props.location}</span>
+              </li>
+              <li className="icon">
+                <span className="icon">
+                  <FaLinkedin className='icon'/>
+                </span>
+                <span className="text">{props.linkedin}</span>
+              </li>
+              <li className="icon">
+                <span className="icon">
+                  <FaGithub className='icon'/>
+                </span>
+                <span className="text">{props.github}</span>
               </li>
             </ul>
           </div>
@@ -86,7 +102,9 @@ export default function CVpdf(props) {
               <li className="text">{showDate(props.fromDate, props.toDate)}</li>
             </ul>
           </div>
+
         </div>
+        
         <div className="right_side">
           <div className="about">
             <h2 className="title2">About me</h2>

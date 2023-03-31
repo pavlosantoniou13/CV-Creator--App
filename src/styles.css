@@ -255,7 +255,7 @@ textarea {
   
 }  
 
-.icon img {
+.icon  {
   height: 25px;
   margin-right: 10px;
 }
@@ -378,7 +378,7 @@ input[type=file]::file-selector-button:hover {
   margin-top: 1rem;
 }
 
-svg {
+.navbar  svg {
   height: 1.5rem;
   cursor: pointer;
   transition: transform 0.15s ease-in-out 0s;
@@ -387,7 +387,7 @@ svg {
 }
 
 
-svg:hover {
+.navbar  svg:hover {
   transform: scale(1.1);
 }
 
