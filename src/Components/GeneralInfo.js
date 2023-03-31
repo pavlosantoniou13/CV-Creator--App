@@ -81,7 +81,7 @@ export default function GeneralInfo(props) {
                         </div>
                     </div>  
                     <div className="imageContainer">
-                        Upload a profile
+                        Upload a profile image
                         <input onChange={props.handleUpload}  type="file" accept="image/*"/>
                         
                     </div>  
