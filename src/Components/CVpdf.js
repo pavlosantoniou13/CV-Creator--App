@@ -48,8 +48,9 @@ export default function CVpdf(props) {
 
   }
 
-  
 
+  
+  console.log(props.languages)
 
 
   return (
@@ -114,7 +115,13 @@ export default function CVpdf(props) {
 
           <div className="contactInfo education">
             <h3 className="title">Languages</h3>
-            <h4>{props.languages}</h4>
+            <ul className='language'>{props.languages.map((language) => {
+              for(let i = 0; i < language.length; i++){
+                return <li>
+                  <span> {language} </span> 
+                </li>
+              }
+            })}</ul>
           </div>
 
         </div>

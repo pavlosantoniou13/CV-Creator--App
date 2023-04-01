@@ -4,7 +4,6 @@ import './styles.css'
 import CVpdf from './Components/CVpdf'
 import {  Routes, Route } from "react-router-dom";
 import { useRef, useState } from 'react'
-import Axios from 'axios';
 import { useReactToPrint } from 'react-to-print';
 
 function App() {
@@ -16,7 +15,7 @@ function App() {
   const [profession, setProfession] = useState("")
   const [linkedin, setLinkedin] = useState("")
   const [github, setGithub] = useState("")
-  const [languages, setLanguages] = useState("")
+  const [languages, setLanguages] = useState([])
 
   const [about, setAbout] = useState("")
   const [hobbies, setHobbies] = useState("")
@@ -39,7 +38,6 @@ function App() {
   const [toJobDate1, settoJobDate1] = useState("")
   const [tasks1, setTasks1] = useState("")
 
-  
 
   const handleChange = (e) => {
     
@@ -73,10 +71,7 @@ function App() {
     }  else if(e.target.id === "github") {
       setGithub(e.target.value)
 
-    }  else if(e.target.id === "languages") {
-      setLanguages(e.target.value)
-
-    }  
+    }    
     
   
 
@@ -132,7 +127,7 @@ function App() {
     
 
     const person = { name, lastName, email, phone, school, titleOfStudy, fromDate, toDate, profession, location, hobbies
-    , company, position, toJobDate, fromJobDate, tasks, about, profession, location,
+    , company, position, toJobDate, fromJobDate, tasks, about,
      company1, position1, toJobDate1, fromJobDate1, tasks1, userImage, linkedin, github, languages }
     console.log(person)
   };
@@ -150,6 +145,10 @@ function App() {
     documentTitle: 'Resume'
   })
 
+  const handleLanguage = (e) => {
+    setLanguages(e)
+  }
+
   return (
     
   <div>
@@ -159,7 +158,7 @@ function App() {
        school={school} titleOfStudy={titleOfStudy} fromDate={fromDate} toDate={toDate} 
         company={company} position={position} fromJobDate={fromJobDate} toJobDate={toJobDate} tasks={tasks}
         company1={company1} position1={position1} fromJobDate1={fromJobDate1} toJobDate1={toJobDate1} tasks1={tasks1} linkedin={linkedin} github={github}
-        handleUpload={handleUpload} languages={languages} />}/>
+        handleUpload={handleUpload} languages={languages} handleLanguage={handleLanguage} />}/>
         
       <Route path='/CVpdf' element={<CVpdf name={name} lastName={lastName} email={email}phone={phone} about={about} profession={profession} location={location} hobbies={hobbies}
        school={school} titleOfStudy={titleOfStudy} fromDate={fromDate} toDate={toDate} 
@@ -168,7 +167,6 @@ function App() {
         userImage={userImage} componentRef={componentRef} linkedin={linkedin} github={github} languages={languages}  />} /> 
 
     </Routes>
-   
   </div>
   );
 }
