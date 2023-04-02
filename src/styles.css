@@ -199,6 +199,7 @@ textarea {
   position: relative;
   background-color: #00645F;
   padding: 40px;
+  max-width: 28vw;
   
 }
 
@@ -206,6 +207,12 @@ textarea {
   position: relative;
   background-color: #fff;
   padding: 40px;
+}
+
+.text {
+  max-width: 25vh;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .profileText {
@@ -259,6 +266,7 @@ textarea {
 
 .contactInfo {
   padding-top: 40px;
+  
 }
 
 .title {
@@ -294,6 +302,10 @@ li {
 .contactInfo ul li span {
   color: #fff;
   font-weight: 400;
+}
+
+.language li {
+  font-size: large;
 }
 
 .text {
@@ -397,6 +409,8 @@ input[type=file]::file-selector-button:hover {
   color: white;
   font-weight: normal;
 }
+
+
 
 p {
   font-size: 1.2rem;
