@@ -142,7 +142,7 @@ function App() {
 
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
-    documentTitle: 'Resume'
+    documentTitle: `${name}`
   })
 
   const handleLanguage = (e) => {
